@@ -258,3 +258,14 @@ we will see the session_id of all users. One of these users has a "fake" session
 ```
 {WSUCTF24:S3arching_Thr0ugh_Very_Expr3ssive_DBz}
 ```
+
+# Resource
+
+One thing that was a little different in this challenge was using express-session to store session_id's in a database.
+Typically, cookies are just stored on the client, and signed by a backend when they need to be verified. No database is necessary.
+When using express-session. It will give you a session identifier which is stored on the database, and it will also handle signing
+the cookie for you using that identifier. This makes it vulnerable to sql injection though, especially if you can find the key, in that
+case, you can sign cookies yourself.
+(explained in part 2)
+
+https://expressjs.com/en/resources/middleware/cookie-session.html
