@@ -234,9 +234,6 @@ CREATE TABLE eatmorecookies.cookies (
 );
 ```
 
-![image](https://github.com/Programmer231/WSUCTF2024/assets/51927329/e35ef1bc-893a-45e7-a2f9-bcbae95305b9)
-
-
 Let's fix that:
 
 # Final Payload
@@ -248,4 +245,8 @@ https://waynestateuniversity-ctf24-eatmorecookies.chals.io/searchcookies?cookies
 And with this, the first TRUE statement will be left out of the query, then in the cookie flavor, instead of an actual cookie from the cookies table,
 we will see the session_id of all users. One of these users has a "fake" session and the flag is in that user's session_id.
 
+![image](https://github.com/Programmer231/WSUCTF2024/assets/51927329/e35ef1bc-893a-45e7-a2f9-bcbae95305b9)
 
+```
+{WSUCTF24:S3arching_Thr0ugh_Very_Expr3ssive_DBz}
+```
