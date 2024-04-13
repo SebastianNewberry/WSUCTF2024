@@ -180,6 +180,7 @@ Here is what we know so far:
 1. There is a sql injection vulnerability
 2. There is a flag inside of a session_id that gets entered into the sessions database when we register a user.
 
+
 So the solution is: we need to use a UNION select sql statement to select the flag from the sessions table. We have to select make sure we
 select the session_id within our sql injection statemnet.
 
@@ -190,6 +191,9 @@ We can use something like this:
 ```
 
 This statement by itself won't exfiltrate the flag though, instead it will produce a different error:
+
+![SQLInject](https://github.com/Programmer231/WSUCTF2024/assets/51927329/18d6a82e-6167-433c-855a-26ca8a8e24d0)
+
 
 ```
 The used SELECT statements have a different number of columns
