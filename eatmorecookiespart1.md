@@ -225,7 +225,7 @@ So we can make a payload like this:
 " UNION Select session_id, True, True from sessions;"
 ```
 
-But we can see that this still doesn't work:
+But we can see that this still doesn't work (We get the same output as with three True keywords):
 
 
 The reason this doesn't work is because this statement is designed to select data from the cookies table,
