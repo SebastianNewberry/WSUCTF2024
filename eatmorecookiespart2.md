@@ -324,13 +324,14 @@ register/login and visit the home page:
 
 ![EatMoreCookies3](https://github.com/Programmer231/WSUCTF2024/assets/51927329/11284d52-820d-46e1-9a8c-ccbbad4119ba)
 
-Use a union based sql injection to get the session_id of a user that has the "isAdmin" attribute set to true.
+Use a union based sql injection to get the session_id of a user that has the "isAdmin" attribute set to true: 
+(Remember the session_id is located under cookie_flavor due to this sql injection)
 
 ![EatMoreCookies3(2)](https://github.com/Programmer231/WSUCTF2024/assets/51927329/b1929f1c-de69-48b6-8a94-7a97f8cb0b95)
 
 copy the session_id into our script and run it:
 
-![EatMoreCookies3(2)](https://github.com/Programmer231/WSUCTF2024/assets/51927329/eab316a1-ba0e-4bc2-81f3-d55c2f2ad5b5)
+![EatMoreCookies3(3)](https://github.com/Programmer231/WSUCTF2024/assets/51927329/3d20d1f3-1598-4f55-a84a-8735d6eba4d1)
 
 then replace the cookie in our browser with the new one:
 
