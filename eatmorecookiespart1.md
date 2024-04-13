@@ -207,6 +207,10 @@ This is one way to leak the number of columns of a table through sql injection. 
 
 You won't get any errors and you can verify that the number of columns in the table is 3.
 
+![SQLinject3](https://github.com/Programmer231/WSUCTF2024/assets/51927329/7d825cad-250d-4877-8a79-1688200ad31f)
+
+
+
 You also can see from the source code the three columns that the sessions table uses in this statement:
 
 ```
