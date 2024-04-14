@@ -316,7 +316,7 @@ make_cookie()
 
 Cool. Now after we print this cookie out, all we have to do is go to our "storage" in the browser, then replace our userCookie with the one that this generates.
 
-#Final Solution
+# Final Solution
 
 Lets go through all of the steps:
 
