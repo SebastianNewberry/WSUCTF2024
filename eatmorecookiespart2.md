@@ -339,7 +339,7 @@ Make sure you leave the s%3A in the cookie. Express looks for this as part of th
 
 ![finalCookie](https://github.com/Programmer231/WSUCTF2024/assets/51927329/1293d461-d7e7-4ad5-ab62-90795096219b)
 
-we used to not be authorized:
+when visiting /flag, we used to not be authorized:
 
 ![EatMoreCookies3(4)](https://github.com/Programmer231/WSUCTF2024/assets/51927329/f810a25d-9896-49bf-83c8-d275d9383ae2)
 
