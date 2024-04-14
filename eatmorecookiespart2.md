@@ -337,7 +337,7 @@ then replace the cookie in our browser with the new one:
 
 Make sure you leave the s%3A in the cookie. Express looks for this as part of the cookie. 
 
-![EatMoreCookies(5)](https://github.com/Programmer231/WSUCTF2024/assets/51927329/61ac05a8-4c40-4da9-af02-49ea462ed526)
+![finalCookie](https://github.com/Programmer231/WSUCTF2024/assets/51927329/1293d461-d7e7-4ad5-ab62-90795096219b)
 
 we used to not be authorized:
 
