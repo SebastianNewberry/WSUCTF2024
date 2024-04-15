@@ -255,15 +255,14 @@ if we scroll down to the end of the debugging output, we will see this:
 So it looks like we found the last part of the challenge.
 
 in order to do this last part, we can either look at the debugging statements, and count seven lines into converted plaintext, then use p.sendlineafter(b">", plaintext).
-Or we can include these steps as part of the script. Here is what I did:
+Or we can include these steps as part of the script.
 
-```
+
 I just created a list of plaintext, then printed out the entire poem along with the line numbers, and I found the bytes "Wow! great job with converting" in the received line,
 then I just broke out of the loop that sends the plaintext.
 
 To finish this challenge, all we have to do is enter the seventh line, of the poem, then use p.interactive() to get an interactive shell and we will have the flag.
 
-```
 
 flag:
 
