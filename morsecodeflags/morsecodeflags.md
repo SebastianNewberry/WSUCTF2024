@@ -26,7 +26,7 @@ from pwn import *
 
 Ok now we are ready to start the challenge.
 
-If we take a look at what the server sends us back. Ok so first lets start with a minimal setup for our solve script. This is typically how it is done in pwntools:
+Ok so first lets start with a minimal setup for our solve script. This is typically how it is done in pwntools:
 
 ```
 #!/usr/bin/python3
@@ -108,7 +108,7 @@ strippedNumber = p.recvline().strip().split(b",")[0]
 numberOfPrompts = int(strippedNumber.decode())
 ```
 
-this will receive all of the bytes until we reach the bytes sequence b"prompts", then it will receive the next line of bytes, then strip the comma away from the number 64.
+this will receive all of the bytes until we reach the byte sequence b"prompts", then it will receive the next line of bytes, then strip the comma away from the number 64.
 
 This will result in us successfully obtaining the number: 64.
 
@@ -126,7 +126,7 @@ It is important to use the decode() function to turn strings into bytes and use 
 In order to send bytes in pwntools, we usually typically use p.sendline() or p.sendlineafter(). Usually p.sendlineafter() is more useful because we can specify a specific byte to send
 a line of bytes after, so the script will receive all of the bytes until it reaches a certain byte, then it will send our payload after that byte.
 
-So in our case, we can use:
+So in our case, we can use, so that we receieve everything until the ">" character, then send our payload:
 
 ```
 p.sendlineafter(b">", payload)
@@ -235,7 +235,7 @@ But we have one problem. We don't know what will happen once we finish this next
 
 If we run it with this code, it will hang, because it is trying to receive bytes until it finds the bytes b"Convert", but it never finds this.
 
-a very useful technique when using pwntools is to set 
+a very useful technique when using pwntools is to set
 
 ```
 context.log_level = "DEBUG"
@@ -263,6 +263,7 @@ then I just broke out of the loop that sends the plaintext.
 
 To finish this challenge, all we have to do is enter the seventh line, of the poem, then use p.interactive() to get an interactive shell and we will have the flag.
 
+(The full solver script is in solve.py)
 
 flag:
 
