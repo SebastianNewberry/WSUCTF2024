@@ -41,10 +41,11 @@ app.use(
 )
 ```
 
-This line 
-'''
+This line
+
+```
 const session = require("express-session");
-'''
+```
 
 Is important, other than that 
 In this code, we can see that the code is using express-session for cookie management. We can use this later on.
